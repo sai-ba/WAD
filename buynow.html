@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Choose Payment Method</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .transaction-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .transaction-container h1 {
+      color: #333;
+    }
+    .transaction-container p {
+      margin: 20px 0;
+    }
+    .payment-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .payment-method {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 200px;
+      margin: 0 auto;
+    }
+    .payment-method:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="transaction-container">
+    <h1>Choose Your Payment Method</h1>
+    <p>Select a payment method to complete your transaction.</p>
+    <div class="payment-methods">
+      <button class="payment-method" onclick="completeTransaction('Credit Card')">Credit Card</button>
+      <button class="payment-method" onclick="completeTransaction('Debit Card')">Debit Card</button>
+      <button class="payment-method" onclick="completeTransaction('Net Banking')">Net Banking</button>
+      <button class="payment-method" onclick="completeTransaction('UPI')">UPI</button>
+      <button class="payment-method" onclick="completeTransaction('Cash on Delivery')">Cash on Delivery</button>
+    </div>
+  </div>
+  <script>
+    function completeTransaction(method) {
+      alert('You have chosen ' + method + ' as your payment method.');
+      window.location.href = 'confirmation.html';
+    }
+  </script>
+</body>
+</html>

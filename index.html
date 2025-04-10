@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Food Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .nav-btn {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .nav-btn:hover {
+      background-color: #218838;
+    }
+
+    .sai ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .sai ul li {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Welcome to Our Hotel Food Menu</h1>
+      <input type="text" id="search" placeholder="Search for dishes..." />
+      <button id="searchButton">Search</button>
+    </header>
+
+    <div class="sai">
+      <ul>
+        <li><a class="nav-btn" href="./index.html">Home</a></li>
+        <li><a class="nav-btn" href="./login.html">Login</a></li>
+        <li><a class="nav-btn" href="./about.html">About</a></li>
+        <li><a class="nav-btn" href="./contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <marquee behavior="" direction="right"><strong>Sai Babu</strong></marquee>
+
+    <main>
+      <section id="home" class="active">
+        <h2>Featured Dishes</h2>
+        <div id="featuredDishes" class="product-grid"></div>
+      </section>
+
+      <section id="dishes" class="hidden">
+        <h1>All Dishes</h1>
+        <div id="dishListing" class="product-grid"></div>
+      </section>
+
+      <section id="dishDetail" class="hidden">
+        <h1 id="dishName"></h1>
+        <img id="dishImage" alt="" />
+        <p id="dishDescription"></p>
+        <p>Price: <span id="dishPrice"></span></p>
+        <button id="addToCartButton">Add to Cart</button>
+      </section>
+
+      <section id="cart" class="hidden">
+        <h1>Your Cart</h1>
+        <div id="cartItems"></div>
+        <p>Total: <span id="cartTotal"></span></p>
+        <button id="checkoutButton">Checkout</button>
+      </section>
+
+      <section id="checkout" class="hidden">
+        <h1>Checkout</h1>
+        <form id="checkoutForm">
+          <label for="name">Name:</label>
+          <input id="name" type="text" required />
+
+          <label for="roomNumber">Room Number:</label>
+          <input id="roomNumber" type="text" required />
+
+          <label for="payment">Payment Info:</label>
+          <input id="payment" type="text" required />
+
+          <button type="submit">Place Order</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Hotel Food Menu</p>
+    </footer>
+  </div>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
